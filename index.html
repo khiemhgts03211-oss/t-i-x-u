@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Tài Xỉu Casino</title>
+  <link rel="stylesheet" href="style.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Orbitron:wght@600&display=swap" rel="stylesheet">
+</head>
+<body class="dark-casino">
+<header class="header">
+  <div class="logo">🎲 TÀI XỈU</div>
+  <div class="balance">
+    💰 <span>1,250,000</span>
+  </div>
+  <div class="actions">
+    <button class="btn deposit">Nạp</button>
+    <button class="btn withdraw">Rút</button>
+    <div class="avatar-wrapper">
+      <button class="avatar-btn">
+        <img src="img/Avatar.jpg" class="avatar" alt="User">
+      </button>
+      <div class="avatar-menu">
+        <div class="menu-item"><a href="#history">Lịch sử</a></div>
+        <div class="menu-item"><a href="#profile">Hồ sơ</a></div>
+        <div class="menu-item logout">🚪 Đăng xuất</div>
+      </div>
+    </div>
+  </div>
+</header>
+<main class="game">
+  <div class="game-container">
+    <section class="table-area">
+      <div class="table">
+        <div class="dice-group" id="diceGroup">
+            <img src="img/dice1.png" class="dice" id="dice1">
+            <img src="img/dice1.png" class="dice" id="dice2">
+            <img src="img/dice1.png" class="dice" id="dice3">
+        </div>
+        <div class="result" id="resultText">
+          <span class="label tai">TÀI</span>
+          <span class="total">14</span>
+        </div>
+      </div>
+    </section>
+    <section class="bet-area">
+      <div class="bet-buttons">
+        <button class="bet-btn tai" id="btnTai">TÀI</button>
+        <button class="bet-btn xiu" id="btnXiu">XỈU</button>
+      </div>
+      <div class="chips">
+        <div class="chip">10K</div>
+        <div class="chip">50K</div>
+        <div class="chip">100K</div>
+        <div class="chip">500K</div>
+      </div>
+      <div class="slider">
+        <input type="range" min="10000" max="500000" step="10000" value="100000">
+        <div class="bet-value">Đặt cược: <b>100,000</b></div>
+      </div>
+    </section>
+    <section class="info-area">
+      <div class="timer danger">⏱ 08</div>
+      <div class="history">
+        <span class="dot tai"></span>
+        <span class="dot xiu"></span>
+        <span class="dot tai"></span>
+        <span class="dot tai"></span>
+        <span class="dot xiu"></span>
+      </div>
+      <div class="notification win">
+        🎉 CHÚC MỪNG! BẠN THẮNG LỚN
+      </div>
+    </section>
+  </div>
+</main>
+<footer class="footer">
+  <a href="#rules">Luật chơi</a>
+  <a href="#support">Hỗ trợ</a>
+  <a href="#policy">Điều khoản & Bảo mật</a>
+</footer>
+<audio id="bgMusic" loop>
+  <source src="audio/(8) -Men 88- - YouTube.mp3" type="audio/mpeg">
+</audio>
+<button class="sound-toggle" id="soundToggle">🔊</button>
+<audio id="winSound">
+  <source src="audio/win.mp3" type="audio/mpeg">
+</audio>
+<script src="script.js"></script>
+<section id="rules" class="rules-section">
+  <h2>📜 Luật chơi Tài Xỉu</h2>
+  <p>
+    Tài Xỉu là trò chơi sử dụng 3 viên xúc xắc.
+    Tổng điểm từ <b>11–17</b> là <span class="tai">TÀI</span>,
+    từ <b>4–10</b> là <span class="xiu">XỈU</span>.
+  </p>
+  <ul>
+    <li>🎲 Mỗi ván gồm 3 viên xúc xắc</li>
+    <li>⏱ Thời gian đặt cược có giới hạn</li>
+    <li>🚫 Không thể đặt cược khi đang lắc</li>
+    <li>🏆 Thắng nếu chọn đúng cửa</li>
+  </ul>
+</section>
+<section id="support" class="support-section">
+  <h2>🎧 Hỗ trợ khách hàng</h2>
+  <p>Đội ngũ CSKH luôn sẵn sàng hỗ trợ 24/7.</p>
+  <div class="support-box">
+    <div>📞 Hotline: <b>1900 9999</b></div>
+    <div>💬 Zalo: <b>zalo.me/taixiu</b></div>
+    <div>📧 Email: <b>support@taixiu.com</b></div>
+  </div>
+</section>
+<section id="policy" class="policy-section">
+  <h2>🔐 Điều khoản & Bảo mật</h2>
+  <p>
+    Khi tham gia trò chơi Tài Xỉu, người chơi đồng ý tuân thủ các điều khoản sử dụng
+    và chính sách bảo mật thông tin của hệ thống.
+  </p>
+  <ul>
+    <li>🔒 Thông tin người chơi được mã hóa và bảo mật tuyệt đối</li>
+    <li>🚫 Nghiêm cấm mọi hành vi gian lận</li>
+    <li>📄 Lịch sử giao dịch được lưu trữ minh bạch</li>
+    <li>⚖️ Hệ thống có quyền cập nhật điều khoản khi cần thiết</li>
+  </ul>
+</section>
+<section id="history" class="history-section">
+  <h2>📊 Lịch sử ván chơi</h2>
+  <div class="history-table">
+    <div class="history-header">
+      <span>Ván</span>
+      <span>Xúc xắc</span>
+      <span>Tổng</span>
+      <span>Kết quả</span>
+    </div>
+    <div class="history-row">
+      <span>#1024</span>
+      <span>🎲 4 - 3 - 5</span>
+      <span>12</span>
+      <span class="tai">TÀI</span>
+    </div>
+    <div class="history-row">
+      <span>#1023</span>
+      <span>🎲 2 - 2 - 3</span>
+      <span>7</span>
+      <span class="xiu">XỈU</span>
+    </div>
+    <div class="history-row">
+      <span>#1022</span>
+      <span>🎲 6 - 6 - 5</span>
+      <span>17</span>
+  </section>
+  <section id="profile" class="profile-section">
+    <h2>👤 Hồ sơ người chơi</h2>
+      <div class="profile-card">
+        <img src="img/Avatar.jpg" class="profile-avatar" alt="Avatar">
+        <div class="profile-info">
+          <div><span>Tên:</span> <b>Người chơi VIP</b></div>
+          <div><span>ID:</span> <b>#TX8899</b></div>
+          <div><span>Số dư:</span> <b class="gold">1,250,000</b></div>
+          <div><span>Trạng thái:</span> <b class="online">Online</b></div>
+        </div>
+      </div>
+  </section>
+</body>
+</html>
